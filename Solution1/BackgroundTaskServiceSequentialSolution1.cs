@@ -40,35 +40,5 @@ public class BackgroundTaskServiceSequentialSolution1 : BackgroundService
         {
             _taskQueue.Clear();
         }
-
-
-        //var runningTasks = new List<Task>();
-
-        //while (!cancellationToken.IsCancellationRequested)
-        //{
-        //    while (_taskQueue.TryDequeue(out var func))
-        //    {
-        //        var task = func(cancellationToken);
-        //        runningTasks.Add(task);
-        //    }
-
-        //    try
-        //    {
-        //        if (runningTasks.Count > 0)
-        //        {
-        //            var completedTask = await Task.WhenAny(runningTasks);
-        //            runningTasks.Remove(completedTask);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex, "An error occurred during background task execution.");
-        //    }
-        //}
-
-        //if (cancellationToken.IsCancellationRequested)
-        //{
-        //    _taskQueue.Clear();
-        //}
     }, cancellationToken);
 }
